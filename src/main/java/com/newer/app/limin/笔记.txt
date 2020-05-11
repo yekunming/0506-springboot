@@ -1,0 +1,51 @@
+昨天
+	springmvc的几个点
+		1.@RestController------第一创建控制层对象
+							      第二表示这个类的所有返回值都是json格式
+		2.@RequestMapping------@RequestMapping("/api")----/api/...
+								用在控制层的类上，表名这个类的所有路径都需要加上类的路径
+		3.getMapping   postMapping   putMapping   deleteMapping
+		4.路径中如何传值
+		5.返回值ResponseEntity
+				这个的返回值只是和直接返回的区别在于他可以有返回时候的响应体的状态
+				
+		6.@CrossOrigin
+				跨域---在跨域的时候才需要使用，不跨域就不需要使用
+				从不同的域名访问一个域名
+				本地访问http://localhost:8989/
+				从http://1127.8.9.10:9090----http://localhost:8989/
+		7.	@Service("名字")    
+			@Resource(name="名字")
+			
+			这个只是可以这样写，有这种选择，大家还是可以遵守之前的写法
+			
+	restFul架构
+	在同一个类中，使用统一的接口   /api/bill---这就是统一的接口
+		一个路径在一个项目中只能够有1个，但是根据请求方式的不同可以写多个
+		3.getMapping ：查找，搜索等请求 
+		  postMapping : 添加请求
+		  putMapping   ：修改请求
+		  deleteMapping ：删除请求
+		  
+		  如果不使用restFul架构的话，是可以不去使用这些的，但是我们如果只用前面2个还是要遵守
+		  一般添加使用post，其他的可以用get。但是一般去公司都会遵守restFull架构风格
+		  
+		  
+		4.路径中如何传值
+			/api/bill/1/2
+			/api/bill/{id}/{a}
+				 (@PathVariable("id") int status)
+				 
+		
+		
+		界面   html
+				原始的前端的框架
+				jquery+ajax
+				vue
+				springboot提供的引擎模板
+				thymeleaf
+				
+				
+						 
+				 
+				 
